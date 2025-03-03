@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Epic Adventure Fund</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #008080; /* Teal */
+            color: #fff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        header {
+            background-color: #ffa500; /* Orange */
+            padding: 20px;
+            text-align: center;
+            border-bottom: 5px solid #ffdb58; /* Mustard */
+            animation: slideInDown 1s ease-in;
+        }
+        header h1 {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 2.5em;
+            color: #fff;
+        }
+        header p {
+            font-size: 1.2em;
+            color: #ffdb58;
+        }
+        nav {
+            background-color: #ffdb58;
+            padding: 10px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        nav ul li {
+            margin: 10px;
+        }
+        nav ul li a {
+            color: #008080;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #ffa500;
+        }
+        .section {
+            padding: 40px;
+            margin: 20px auto;
+            max-width: 1200px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            animation: fadeInUp 1s ease-in;
+        }
+        .section h2 {
+            font-family: 'Press Start 2P', cursive;
+            color: #ffa500;
+            margin-bottom: 20px;
+        }
+        .section ul {
+            list-style: square;
+            margin-left: 20px;
+        }
+        .legal-split {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        .legal-split div {
+            width: 48%;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .serious {
+            background-color: #fff;
+            color: #000;
+            font-family: 'Arial', sans-serif;
+        }
+        .comedy {
+            background-color: #ffa500;
+            color: #fff;
+        }
+        .calc-container {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #ffdb58;
+            color: #008080;
+            border-radius: 5px;
+        }
+        .calc-container input, .calc-container button {
+            padding: 10px;
+            margin: 5px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #ffdb58;
+            color: #008080;
+        }
+        .retro-img {
+            width: 100%;
+            max-width: 300px;
+            margin: 20px auto;
+            display: block;
+            border: 3px solid #ffa500;
+            border-radius: 5px;
+        }
+        @keyframes slideInDown {
+            from { transform: translateY(-100%); }
+            to { transform: translateY(0); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+                flex-direction: column;
+            }
+            nav ul.active {
+                display: flex;
+            }
+            .toggle-btn {
+                display: block;
+                font-size: 1.5em;
+                background: none;
+                border: none;
+                color: #008080;
+                cursor: pointer;
+            }
+            .legal-split {
+                flex-direction: column;
+            }
+            .legal-split div {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>The Epic Adventure Fund</h1>
+        <p>Uniting Friends Across Continents for Epic Trips<br>Presented by Thejas and Friends: Adithi, Dhanya, Eman, Sheetal, Elroy</p>
+    </header>
+
+    <nav>
+        <button class="toggle-btn" onclick="toggleNav()">☰</button>
+        <ul id="nav-list">
+            <li><a href="#intro">Introduction</a></li>
+            <li><a href="#fund">Fund Pooling</a></li>
+            <li><a href="#trips">Trip Planning</a></li>
+            <li><a href="#invest">Investment</a></li>
+            <li><a href="#plusone">Plus-One</a></li>
+            <li><a href="#subsidy">Subsidy</a></li>
+            <li><a href="#legal">Legal Contract</a></li>
+            <li><a href="#disclaimer">Disclaimer</a></li>
+        </ul>
+    </nav>
+
+    <div class="section" id="intro">
+        <h2>Introduction</h2>
+        <p>We’re a group of six friends—Adithi, Dhanya, Eman, Sheetal, Elroy, and Thejas—spread across India, the UK, and Australia. Our mission? To create a dynamic fund that fuels epic group trips, adapting to income differences, global distances, and spontaneous plus-ones. This retro-inspired plan blends fairness, growth, and a whole lot of fun!</p>
+        <img src="D:\retro-group .png.png" alt="Retro Group Illustration" class="retro-img"> <!-- Placeholder -->
+    </div>
+
+    <div class="section" id="fund">
+        <h2>Fund Pooling Mechanism</h2>
+        <ul>
+            <li><strong>Contributions:</strong> Each member invests any sum they wish, minimum 1% of income (less for Elroy and Sheetal in UK/Australia).</li>
+            <li><strong>Tracking:</strong> No specific balances; funds tracked as units for trip budget allocation.</li>
+            <li><strong>Growth:</strong> Funds grow with returns, boosting trip budgets yearly.</li>
+            <li><strong>Transparency:</strong> Quarterly updates on fund appreciation shared by Thejas.</li>
+        </ul>
+        <div class="calc-container">
+            <h3>Contribution Calculator</h3>
+            <input type="number" id="income" placeholder="Your Monthly Income ($)" min="0">
+            <button onclick="calculateContribution()">Calculate</button>
+            <p id="result"></p>
+        </div>
+    </div>
+
+    <div class="section" id="trips">
+        <h2>Trip Planning and Budgeting</h2>
+        <ul>
+            <li><strong>Planning:</strong> Any member can propose; participants opt in.</li>
+            <li><strong>Budgeting:</strong> Costs incurred from units purchased by involved members (e.g., 4 members = cost split by their units).</li>
+            <li><strong>Growth:</strong> Fund returns increase trip budgets annually.</li>
+        </ul>
+        <img src="D:\retro-map .png.png" alt="Retro World Map" class="retro-img"> <!-- Placeholder -->
+    </div>
+
+    <div class="section" id="invest">
+        <h2>Investment Strategy</h2>
+        <ul>
+            <li><strong>Objective:</strong> Maximize returns for epic trips.</li>
+            <li><strong>Management:</strong> Thejas oversees low-to-moderate risk investments (e.g., ETFs, bonds).</li>
+            <li><strong>Updates:</strong> Fund balance appreciation reported quarterly.</li>
+            <li><strong>Risk:</strong> Diversified portfolio, max 20% in high-risk assets.</li>
+        </ul>
+    </div>
+
+    <div class="section" id="plusone">
+        <h2>Plus-One Policy</h2>
+        <ul>
+            <li><strong>Eligibility:</strong> Any member can bring friends with early notice.</li>
+            <li><strong>Cost:</strong> Pledge to double contribution henceforth (e.g., $2k becomes $4k with a plus-one).</li>
+            <li><strong>Rules:</strong> Notify 1 month in advance; new funds allocated accordingly.</li>
+        </ul>
+        <img src="D:\retro-ticket .png.png" alt="Retro Guest Ticket" class="retro-img"> <!-- Placeholder -->
+    </div>
+
+    <div class="section" id="subsidy">
+        <h2>Subsidy Plan</h2>
+        <ul>
+            <li><strong>Context:</strong> Adithi, Thejas, and Eman get flexibility.</li>
+            <li><strong>Plan:</strong> No minimum investment for 1 year; others cover via higher contributions.</li>
+            <li><strong>Post-1 year:</strong> All adhere to 1% minimum (or less for foreign dwellers).</li>
+        </ul>
+    </div>
+
+    <div class="section" id="legal">
+        <h2>Legal Contract</h2>
+        <div class="legal-split">
+            <div class="serious">
+                <h3>The Epic Adventure Fund Agreement</h3>
+                <ul>
+                    <li><strong>Parties:</strong> Thejas, Adithi, Dhanya, Eman, Sheetal, Elroy.</li>
+                    <li><strong>Purpose:</strong> Pool funds for travel with flexible contributions.</li>
+                    <li><strong>Contributions:</strong> Min 1% income (less for UK/Australia), subsidies for 1 year.</li>
+                    <li><strong>Management:</strong> Thejas invests, reports quarterly.</li>
+                    <li><strong>Termination:</strong> 3-month notice or unanimous vote; units refunded proportionally.</li>
+                </ul>
+                <p>Legally binding per terms.</p>
+            </div>
+            <div class="comedy">
+                <h3>Challenging Repercussions (Not Enforceable)</h3>
+                <ul>
+                    <li><strong>No-Show Without Reason:</strong> Dress as a retro mascot (e.g., disco llama) and lead the next trip’s karaoke night.</li>
+                    <li><strong>Last-Minute Cancel:</strong> Perform a 10-minute stand-up comedy routine about your excuse at the next meetup—or fund a group pizza night.</li>
+                    <li><strong>Fund Misuse:</strong> Run a “Fund Redemption Marathon” (5K in a ridiculous costume) and post it online for group approval.</li>
+                </ul>
+                <p>For epic laughs and epic redemption!</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section" id="disclaimer">
+        <h2>Disclaimer</h2>
+        <p>This Epic Adventure Fund (“Fund”) is a voluntary, informal agreement among friends and carries inherent risks and responsibilities:</p>
+        <ul>
+            <li><strong>Financial Risks:</strong> Investments may lose value due to market volatility, economic downturns, or poor management decisions. Returns are not guaranteed, and losses could reduce trip budgets significantly.</li>
+            <li><strong>Participation:</strong> Trips are optional; members manage their own travel logistics, visas, and personal expenses beyond allocated units. Non-participation does not entitle refunds unless the Fund dissolves.</li>
+            <li><strong>Plus-Ones:</strong> Members are fully liable for their guests’ costs, conduct, and compliance with group rules. Failure to increase contributions as pledged may result in exclusion from future trips.</li>
+            <li><strong>Subsidies:</strong> Temporary for 1 year for Adithi, Thejas, and Eman, subject to group consensus; may be revoked if abused or if financial strain on others becomes unsustainable.</li>
+            <li><strong>Legal:</strong> This agreement is binding to the extent of contributions and unit allocations, governed by applicable laws in members’ jurisdictions (India, UK, Australia). Disputes resolved by majority vote or mediation; no liability assumed by Thejas beyond reasonable care in fund management.</li>
+            <li><strong>Fund Management:</strong> Thejas is not a professional financial advisor; investment choices are at group risk. Quarterly reports are for transparency, not legal accountability.</li>
+            <li><strong>Dissolution:</strong> Fund dissolution requires unanimous consent; delays in refunding units may occur due to market conditions or liquidation timelines.</li>
+            <li><strong>Miscellaneous:</strong> Members assume risks of travel mishaps, currency fluctuations, or unforeseen events (e.g., pandemics). Comedic repercussions are for entertainment and not enforceable; serious breaches may lead to exclusion by group vote.</li>
+        </ul>
+        <p>Consult a legal or financial professional before committing significant funds. Participation implies acceptance of these terms and risks.</p>
+    </div>
+
+    <footer>
+        <p>© 2025 The Epic Adventure Fund | Designed with Retro Flair</p>
+    </footer>
+
+    <script>
+        function toggleNav() {
+            const navList = document.getElementById('nav-list');
+            navList.classList.toggle('active');
+        }
+
+        function calculateContribution() {
+            const income = parseFloat(document.getElementById('income').value) || 0;
+            const minContribution = income * 0.01; // 1% of income
+            const result = document.getElementById('result');
+            result.innerHTML = `Minimum Contribution: $${minContribution.toFixed(2)} (1% of $${income}).<br>You can invest more as desired!`;
+        }
+    </script>
+</body>
+</html>
